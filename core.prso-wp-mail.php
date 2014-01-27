@@ -281,7 +281,8 @@ function wp_mail( $to, $subject, $message, $headers = '', $attachments = array()
 
 	// Send!
 	try {
-		return $phpmailer->Send();
+		$phpmailer->Send();
+		return true;
 	} catch ( phpmailerException $e ) {
 		return false;
 	}
